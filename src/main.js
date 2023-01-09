@@ -1,8 +1,5 @@
-import animateTitle from './features/animateTitle'
-import createBadge from './features/createBasge'
+import * as dribble from './features/dribbleSlider'
 import './styles/style.css'
 
-console.log('Welcome to Vite + JS + Webflow!')
-
-createBadge()
-animateTitle()
+window.Webflow ||= []
+window.Webflow.push(dribble.init)
