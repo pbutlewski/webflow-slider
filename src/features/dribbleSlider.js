@@ -8,11 +8,13 @@ export function init() {
 
   const createElement = (element, index) => {
     const anchor = document.getElementsByClassName(SliderLinkClass)[index]
+    console.log(anchor)
     anchor.href = element.html_url
     anchor.target = '_blank'
     anchor.title = element.title
 
-    const image = document.getElementsByClassName(SliderImageClass)[index]
+    const image = anchor.querySelector(SliderImageClass)
+    console.log(image)
     image.dataset.src = element.images.hidpi
   }
 
