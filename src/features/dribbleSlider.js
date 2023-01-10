@@ -26,11 +26,8 @@ export function init() {
     const firstSliderData = data.slice(0, itemsHalf)
     const secondSliderData = data.slice(itemsHalf)
     const elementsHalf = Math.ceil(sliderItems.length / 2)
-    console.log(sliderItems)
     const firstSlider = sliderItems.slice(0, elementsHalf)
-    console.log(firstSlider)
     const secondSlider = sliderItems.slice(elementsHalf)
-    console.log(secondSlider)
     firstSlider.forEach((el, index) => replaceImage(el, index, firstSliderData))
     secondSlider.forEach((el, index) =>
       replaceImage(el, index, secondSliderData)
